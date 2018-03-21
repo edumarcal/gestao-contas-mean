@@ -1,0 +1,68 @@
+<!-- Agradeço a Deus pelo dom do conhecimento -->
+
+	<a id="sair" href="#/auth" class="glyphicon glyphicon-remove-circle">Logout</a>
+	<h1 class="page-header">Gestão de Contas</h1>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand active" href="#/pedido">novo pedido</a>
+				<a class="navbar-brand" href="#/produto">novo produto</a>
+				<a class="navbar-brand" href="historico">historico</a>
+				<input id="search" type="text" class="form-control navbar-brand " placeholder="Buscar cliente" ng-model="filtro">
+				<p class="navbar-brand">Total a receber: <span class="alert-danger">{{receber}}<span></p>
+				<p class="navbar-brand">Lucro parcial: <span class="alert-warning">{{lParcial}}<span></p>
+				<p class="navbar-brand">Lucro geral: <span class="alert-success">{{lGeral}}<span></p>
+			</div>
+		</div>
+	</nav>
+<!--
+	<p class="text-info" ng-hide="pedido.length">Não há pedido cadastrados</p>
+-->
+	<div class="table-responsive">
+	  <table class="table table-hover">
+	    <tr>
+			<th>CLIENTE</th>
+			<th>DATA</th>
+			<th>PRODUTO</th>
+			<th>PREÇO</th>
+			<th>PARCELAS</th>
+			<th>RESTANTE</th>
+			<th class="text-center">AÇÃO</th>
+			<th>CICLO</th>
+	    </tr>
+	    <!--<tr ng-repeat="pedido in pedidos | filter: filtro">-->
+			<tr  ng-repeat="pedido in pedidos">
+				<td>
+					<a ng-href="#/pedido/{{pedidos._id}}">{{pedidos.cliente}}</a>
+				</td>
+				<td>{{pedidos.data}}</td>
+				<td>{{produtos.descricao}}</td>
+				<td>{{pedidos.precoproduto}}</td>
+				<td>{{pedidos.parcelas}} parcelas</td>
+				<td>{{pedidos.Restante}}</td>
+	      <td class="text-center">
+					<div class="input-group pagamento">
+						<input type="text" class="form-control" id="email" placeholder="1">
+						<span class="input-group-addon">
+								<input type="checkbox"></span>
+					</div>
+<!--
+	        <button ng-click="remove(contato)" class="btn btn-warning">Remover</button>
+
+					<button ng-click="remove(contato)" class="btn btn-info">Confirmar</button>
+-->
+					<div class="input-group pagamento">
+						<input type="text" class="form-control" id="email" placeholder="1">
+						<span class="input-group-addon">
+								<input type="checkbox"></span>
+					</div>
+					<div class="input-group pagamento">
+						<input type="text" class="form-control" id="email" placeholder="1">
+						<span class="input-group-addon">
+								<input type="checkbox"></span>
+					</div>
+				</td>
+					<td>{{pedidos.ciclo}}</td>
+	    </tr>
+	  </table>
+	</div>

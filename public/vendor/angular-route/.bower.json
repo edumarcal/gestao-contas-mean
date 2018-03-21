@@ -1,0 +1,20 @@
+{
+  "name": "angular-route",
+  "version": "1.5.0-build.4396+sha.596af70",
+  "main": "./angular-route.js",
+  "ignore": [],
+  "dependencies": {
+    "angular": "1.5.0-build.4396+sha.596af70"
+  },
+  "homepage": "https://github.com/angular/bower-angular-route",
+  "_release": "1.5.0-build.4396+sha.596af70",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.5.0-build.4396+sha.596af70",
+    "commit": "2989748959276e0e365631f8b9ebde25bfa47944"
+  },
+  "_source": "git://github.com/angular/bower-angular-route.git",
+  "_target": "1.5",
+  "_originalSource": "angular-route",
+  "_direct": true
+}

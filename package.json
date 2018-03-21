@@ -1,0 +1,24 @@
+{
+  "name": "contas",
+  "version": "0.0.0",
+  "description": "gerenciar as dispesas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Marçal",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.13.3",
+    "express-load": "~1.1.15",
+    "body-parser": "~1.14.2",
+    "cookie-parser": "~1.4.1",
+    "express-session": "~1.13.0",
+    "method-override": "~2.3.5",
+    "mongod": "~1.3.0",
+    "mongoose": "~4.3.6",
+    "ejs": "~2.3.4",
+    "mongoose-findorcreate": "~0.1.2",
+    "mongo-sanitize": "~1.0.0"
+  }
+}

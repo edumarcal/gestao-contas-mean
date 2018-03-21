@@ -1,0 +1,27 @@
+<!-- Agradeço a Deus pelo dom do conhecimento -->
+<!DOCTYPE html>
+<html ng-app="contas">
+  <head>
+    <meta charset="utf-8">
+    <title>Gestão de Contas</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
+  </head>
+  <body class="container">
+    
+    <!--Scripts and Styles-->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="vendor/angular-resource/angular-resource.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers/ProdutoController.js"></script>
+    <script src="js/controllers/PedidoController.js"></script>
+    <script src="js/controllers/PrincipalController.js"></script>
+    <script src="js/services/ProdutoService.js"></script>
+    <script src="js/services/PedidoService.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <div ng-view></div>
+
+  </body>
+</html>
