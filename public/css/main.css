@@ -1,3 +1,5 @@
+/* Agradeço a Deus pelo dom do conhecimento */
+
 @media screen and (orientation:landscape) {
 	.container_auth{
 		position: absolute;
@@ -20,14 +22,6 @@
 	padding: 15px;
 }
 
-.container_pedido{
-	position: relative;
-	left: 50%;
-	margin-left: -440px;
-	max-width: 900px;
-	min-width: 400px;
-	padding: 15px;
-}
 	#search{
 		width: auto;
 		margin: 5px;

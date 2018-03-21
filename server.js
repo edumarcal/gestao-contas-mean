@@ -1,9 +1,11 @@
-//app/server.js
+// Agradeço a Deus pelo dom do conhecimento
+// server.js
 
 var http = require('http');
-var app = require('./config/express')(app);
-require('./config/database.js')('mongodb://localhost/contas');
+//var express = require('express');
+var app = require('./config/express')();
+require('./config/database.js')('mongodb://localhost/webgcontas');
 
-http.createServer(app).listen(app.get('port'), function(){
-	console.log('Express Server executando na porta '+ app.get('port'));
+http.createServer(app).listen(app.get('port'), function() {
+  console.log('Servidor executando na porta '+ app.get('port'));
 });

@@ -1,0 +1,11 @@
+/* Agradeço a Deus pelo dom do conhecimento */
+
+@media screen and (orientation:landscape) {
+	.container{
+		position: relative;
+		margin-top: 40%;
+		max-width: 330px;
+		min-width: 280px;
+		padding: 15px;
+	}
+}

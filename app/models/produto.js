@@ -1,15 +1,16 @@
 // Agradeço a Deus pelo dom do conhecimento
-// app/models/produto.js
+// app/models/produtos
 
 var mongoose = require('mongoose');
+//var findOrCreate = require('mongoose-findorcreate');
 
 module.exports = function() {
+
   var schema = mongoose.Schema({
     codigo : {
       type : Number,
-      required : true,
       unique : true,
-      distinct : true
+      required : true
     },
     descricao : {
       type : String,
@@ -17,5 +18,6 @@ module.exports = function() {
     }
   }, { versionKey: false });
 
-  return mongoose.model('Produto', schema);
+  //schema.plugin(findOrCreate);
+  return mongoose.model('Produtos', schema);
 };

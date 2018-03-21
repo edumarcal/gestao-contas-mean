@@ -1,32 +1,30 @@
 // Agradeço a Deus pelo dom do conhecimento
 // public/js/main.js
 
-angular.module('contas', [ 'ngRoute', 'ngResource' ]).config(function ($routeProvider, $httpProvider) {
+angular.module('webgcontas', ['ngRoute', 'ngResource'])
+                 .config(function($routeProvider, $httpProvider) {
+
+  $httpProvider.interceptors.push('Interceptors'); //interceptors autenticação obrigatória
+
+  $routeProvider.when('/', {
+    templateUrl : 'partials/principal.html',
+    controller : 'PedidosController'
+  });
 
   $routeProvider.when('/produto', {
     templateUrl : 'partials/produto.html',
-    controller : 'ProdutoController'
-  });
-
-  $routeProvider.when('/produto/:produtoId', {
-    templateUrl : 'partials/produto.html',
-    controller : 'ProdutoController'
-  });
-
-  $routeProvider.when('/principal', {
-  	templateUrl : 'partials/principal.html',
-  	controller : 'PrincipalController'
+    controller : 'ProdutosController'
   });
 
   $routeProvider.when('/pedido', {
-  	templateUrl : 'partials/pedido.html',
-  	controller : 'PedidoController'
+      templateUrl : 'partials/pedido.html',
+      controller : 'PedidosController'
   });
 
-  $routeProvider.when('/pedido/pedidoId', {
-  	templateUrl : 'partials/pedido.html',
-  	controller : 'PedidoController'
+  $routeProvider.when('/auth', {
+    templateUrl : 'partials/autenticacao.html',
   });
 
-  $routeProvider.otherwise({redirectTo : '/principal'});
+  //$routeProvider.otherwise({redirectTo : '/list'});
+
 });
